@@ -1,0 +1,74 @@
+[
+  {
+    "venda_id": 1,
+    "produto": "Notebook Gamer",
+    "quantidade": 1,
+    "preco_unit": 4500,
+    "vendedor": "Ana",
+    "data": "2025-06-01"
+  },
+  {
+    "venda_id": 2,
+    "produto": "Mouse Sem Fio",
+    "quantidade": 3,
+    "preco_unit": 150,
+    "vendedor": "Carlos",
+    "data": "2025-06-05"
+  },
+  {
+    "venda_id": 3,
+    "produto": "Teclado Mecânico",
+    "quantidade": 2,
+    "preco_unit": 350,
+    "vendedor": "Ana",
+    "data": "2025-06-10"
+  },
+  {
+    "venda_id": 4,
+    "produto": "Monitor 27 polegadas",
+    "quantidade": 1,
+    "preco_unit": 1800,
+    "vendedor": "Beatriz",
+    "data": "2025-07-02"
+  },
+  {
+    "venda_id": 5,
+    "produto": "Notebook Gamer",
+    "quantidade": 1,
+    "preco_unit": 4600,
+    "vendedor": "Carlos",
+    "data": "2025-07-15"
+  },
+  {
+    "venda_id": 6,
+    "produto": "Cadeira Gamer",
+    "quantidade": 1,
+    "preco_unit": 1200,
+    "vendedor": "Ana",
+    "data": "2025-07-20"
+  },
+  {
+    "venda_id": 7,
+    "produto": "Mouse Sem Fio",
+    "quantidade": 5,
+    "preco_unit": 155,
+    "vendedor": "Daniel",
+    "data": "2025-08-01"
+  },
+  {
+    "venda_id": 8,
+    "produto": "Teclado Mecânico",
+    "quantidade": 1,
+    "preco_unit": 360,
+    "vendedor": "Beatriz",
+    "data": "2025-08-12"
+  },
+  {
+    "venda_id": 9,
+    "produto": "Headset Gamer",
+    "quantidade": 2,
+    "preco_unit": 550,
+    "vendedor": "Carlos",
+    "data": "2025-08-25"
+  }
+]

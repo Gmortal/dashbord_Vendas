@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importação do Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Vendas</h1>
+    </header>
+
+    <main>
+        <section class="filters">
+            <label for="month-filter">Filtrar por Mês:</label>
+            <select id="month-filter">
+                <option value="todos">Todos os Meses</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+            </select>
+        </section>
+
+        <section class="kpi-container">
+            <div class="card">
+                <h3>Total de Vendas</h3>
+                <p id="total-vendas">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Ticket Médio</h3>
+                <p id="ticket-medio">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Total de Pedidos</h3>
+                <p id="total-pedidos">0</p>
+            </div>
+        </section>
+
+        <section class="charts-container">
+            <div class="chart-wrapper">
+                <h3>Vendas por Mês (Gráfico de Barras)</h3>
+                <!-- Contêiner extra para controlar o tamanho do canvas -->
+                <div class="chart-canvas-container">
+                    <canvas id="graficoVendasMes"></canvas>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Vendas por Produto (Gráfico de Pizza)</h3>
+                <!-- Contêiner extra para controlar o tamanho do canvas -->
+                <div class="chart-canvas-container">
+                    <canvas id="graficoVendasProduto"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mensagem para orientar o usuário a girar o dispositivo -->
+        <div class="rotate-device-message">
+            <p>🔃</p>
+            <p>Gire o seu dispositivo para uma melhor visualização dos gráficos.</p>
+        </div>
+    </main>
+
+    <!-- Nosso script principal deve ser o último elemento do body -->
+    <script src="script.js"></script>
+</body>
+</html>

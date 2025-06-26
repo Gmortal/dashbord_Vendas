@@ -1,0 +1,157 @@
+:root {
+    --bg-color: #f4f7fa;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filters {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+#month-filter {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.kpi-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.card p {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.charts-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.chart-wrapper {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, flex-basis */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-wrapper h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px; /* Adiciona um espaço entre o título e o gráfico */
+}
+
+/* ======================================= */
+/* SEÇÃO DE RESPONSIVIDADE - VERSÃO FINAL  */
+/* ======================================= */
+
+/* Estilos para a mensagem de orientação (escondida por padrão) */
+.rotate-device-message {
+    display: none;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+}
+
+.rotate-device-message p:first-child {
+    font-size: 3em;
+    margin: 0;
+}
+
+.rotate-device-message p:last-child {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+/* Regras para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    .kpi-container {
+        flex-direction: column;
+    }
+
+    /* Se a tela for pequena E estiver no modo RETRATO */
+    @media (orientation: portrait) {
+        .charts-container {
+            display: none; /* Esconde os gráficos */
+        }
+        .rotate-device-message {
+            display: block; /* Mostra a mensagem para girar */
+        }
+    }
+
+    /* Se a tela for pequena E estiver no modo PAISAGEM */
+    @media (orientation: landscape) {
+        .charts-container {
+            flex-direction: column; /* Empilha os wrappers dos gráficos */
+            gap: 25px; /* Adiciona um espaço entre os gráficos empilhados */
+        }
+        
+        /* A solução definitiva: contêiner com altura fixa */
+        .chart-canvas-container {
+            position: relative; /* Cria o contexto de posicionamento */
+            height: 280px;      /* Define uma ALTURA FIXA E SENSATA */
+            width: 100%;        /* Ocupa toda a largura disponível */
+        }
+    }
+}
